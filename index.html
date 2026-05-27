@@ -26,7 +26,7 @@ nav { background: var(--card); border-bottom: 0.5px solid var(--border); padding
 .photo-wrap { width: 320px; overflow: hidden; border: 0.5px solid var(--border); flex-shrink: 0; }
 .photo-wrap img { width: 100%; display: block; object-fit: cover; object-position: center top; }
 
-/* Social Buttons — Alex Grantl Stil */
+/* Social Buttons */
 .social { display: flex; gap: 5px; width: 320px; }
 .social-btn { flex: 1; height: 34px; border-radius: 2px; border: 0.5px solid var(--border); background: var(--card); display: flex; align-items: center; justify-content: center; gap: 5px; text-decoration: none; transition: background 0.15s; color: var(--text); }
 .social-btn:hover { background: var(--accent-light); }
@@ -81,7 +81,7 @@ nav { background: var(--card); border-bottom: 0.5px solid var(--border); padding
 .form-submit { padding: 9px 24px; background: var(--text); color: #fff; border: none; border-radius: 2px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; cursor: pointer; transition: opacity 0.2s; width: 100%; max-width: 680px; box-sizing: border-box; }
 .form-submit:hover { opacity: 0.85; }
 footer { padding: 16px 32px; text-align: center; font-size: 11px; color: var(--muted); border-top: 0.5px solid var(--border); background: var(--card); margin-top: 1px; }
-@media (max-width: 680px) {
+@media (max-width: 500px) {
   .hero { padding-left: 20px !important; }
   .contact-section { padding-left: 20px; padding-right: 20px; }
   .hero { padding: 32px 20px 32px 20px; }
@@ -199,7 +199,7 @@ footer { padding: 16px 32px; text-align: center; font-size: 11px; color: var(--m
 
 <div class="contact-section" id="contact">
   <h2 class="contact-title">Kontakt</h2>
-  <form action="https://formspree.io/f/mzdwklyp" method="POST">
+  <form action="https://formspree.io/f/mzdwklyp" method="POST" style="width:100%;max-width:680px;box-sizing:border-box;">
     <div class="form-group"><label class="form-label">Name</label><input class="form-input" type="text" name="name" placeholder="Dein Name" required></div>
     <div class="form-group"><label class="form-label">E-Mail</label><input class="form-input" type="email" name="email" placeholder="deine@email.de" required></div>
     <div class="form-group"><label class="form-label">Nachricht</label><textarea class="form-textarea" name="message" placeholder="Deine Nachricht..." required></textarea></div>
