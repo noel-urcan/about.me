@@ -71,14 +71,14 @@ nav { background: var(--card); border-bottom: 0.5px solid var(--border); padding
 .media-img { width: 160px; height: 90px; object-fit: cover; display: block; flex-shrink: 0; }
 
 /* Kontakt */
-.contact-section { background: var(--card); margin-top: 1px; padding: 40px 32px 64px; }
-.contact-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 400; margin-bottom: 24px; padding-bottom: 10px; border-bottom: 0.5px solid var(--border); text-align: center; max-width: 680px; margin-left: auto; margin-right: auto; }
-.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; width: 100%; }
+.contact-section { background: var(--card); margin-top: 1px; padding: 40px 32px 64px; display: flex; flex-direction: column; align-items: center; }
+.contact-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 400; margin-bottom: 24px; padding-bottom: 10px; border-bottom: 0.5px solid var(--border); width: 680px; text-align: center; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; width: 680px; }
 .form-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .form-input, .form-textarea { padding: 9px 11px; border: 0.5px solid var(--border); border-radius: 2px; background: var(--bg); font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text); outline: none; transition: border-color 0.2s; width: 100%; display: block; }
 .form-input:focus, .form-textarea:focus { border-color: var(--text); }
 .form-textarea { resize: vertical; min-height: 100px; }
-.form-submit { padding: 9px 24px; background: var(--text); color: #fff; border: none; border-radius: 2px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; cursor: pointer; transition: opacity 0.2s; width: 100%; }
+.form-submit { padding: 9px 24px; background: var(--text); color: #fff; border: none; border-radius: 2px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; cursor: pointer; transition: opacity 0.2s; width: 680px; }
 .form-submit:hover { opacity: 0.85; }
 footer { padding: 16px 32px; text-align: center; font-size: 11px; color: var(--muted); border-top: 0.5px solid var(--border); background: var(--card); margin-top: 1px; }
 @media (max-width: 680px) {
@@ -197,7 +197,7 @@ footer { padding: 16px 32px; text-align: center; font-size: 11px; color: var(--m
 
 <div class="contact-section" id="contact">
   <h2 class="contact-title">Kontakt</h2>
-  <form action="https://formspree.io/f/mzdwklyp" method="POST" style="max-width:680px; margin:0 auto; width:100%;">
+  <form action="https://formspree.io/f/mzdwklyp" method="POST">
     <div class="form-group"><label class="form-label">Name</label><input class="form-input" type="text" name="name" placeholder="Dein Name" required></div>
     <div class="form-group"><label class="form-label">E-Mail</label><input class="form-input" type="email" name="email" placeholder="deine@email.de" required></div>
     <div class="form-group"><label class="form-label">Nachricht</label><textarea class="form-textarea" name="message" placeholder="Deine Nachricht..." required></textarea></div>
