@@ -44,6 +44,7 @@ nav { background: var(--card); border-bottom: 0.5px solid var(--border); padding
 
 /* Social Buttons — Alex Grantl Stil */
 .social { display: flex; gap: 5px; width: 320px; }
+.threema { font-size: 10px; color: var(--muted); margin-top: 8px; letter-spacing: 0.01em; }
 .social-btn { flex: 1; height: 34px; border-radius: 2px; border: 0.5px solid var(--border); background: var(--card); display: flex; align-items: center; justify-content: center; gap: 5px; text-decoration: none; transition: background 0.15s; color: var(--text); }
 .social-btn:hover { background: var(--accent-light); }
 .social-btn svg { width: 12px; height: 12px; stroke: var(--text); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
@@ -96,7 +97,13 @@ nav { background: var(--card); border-bottom: 0.5px solid var(--border); padding
 .form-textarea { resize: vertical; min-height: 100px; }
 .form-submit { padding: 9px 24px; background: var(--text); color: #fff; border: none; border-radius: 2px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; cursor: pointer; transition: opacity 0.2s; width: 680px; }
 .form-submit:hover { opacity: 0.85; }
-footer { padding: 16px 32px; text-align: center; font-size: 11px; color: var(--muted); border-top: 0.5px solid var(--border); background: var(--card); margin-top: 1px; }
+footer { padding: 16px 32px; font-size: 11px; color: var(--muted); border-top: 0.5px solid var(--border); background: var(--card); margin-top: 1px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+.footer-text { justify-self: center; }
+.footer-social { display: flex; gap: 8px; justify-self: start; }
+.footer-social a { width: 24px; height: 24px; border-radius: 2px; border: 0.5px solid var(--border); background: var(--card); display: flex; align-items: center; justify-content: center; text-decoration: none; transition: background 0.15s; }
+.footer-social a:hover { background: var(--accent-light); }
+.footer-social svg { width: 11px; height: 11px; stroke: var(--text); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
 @media (max-width: 680px) {
   .hero { padding: 32px 20px; }
   .hero-name { font-size: 36px; }
@@ -149,6 +156,7 @@ footer { padding: 16px 32px; text-align: center; font-size: 11px; color: var(--m
           <span>Mail</span>
         </a>
       </div>
+      <div class="threema">Threema: 9EHTWD8P</div>
     </div>
     <p class="hero-bio">Jahrgang 1996, in Hamburg geboren und aufgewachsen. Studium der Soziologie in Hamburg und Guadalajara, Mexiko, mit dem Schwerpunkt Verbreitung von Verschwörungstheorien im medialen Wandel. Anschließend ein Jahr in Guadalajara, in einer NGO für Migrationsberatung und Geflüchtetenhilfe. Freier Autor für die politische Satiresendung <a href="https://www.ardmediathek.de/extra-3" target="_blank">»extra 3«</a> (NDR). Veröffentlichungen im <a href="https://www.kohero-magazin.de/" target="_blank">»kohero Magazin«</a> zu Migration, Sozialpolitik und sozialer Klasse. Stipendiat des <a href="https://netzwerkrecherche.org/wir-foerdern/investigativjournalismus-fellowship/" target="_blank">Investigativ-Fellowships</a> (2026) von <a href="https://netzwerkrecherche.org/blog/investigativ-fellowship-jahrgang-2026/" target="_blank">Netzwerk Recherche</a> und den <a href="https://www.neuemedienmacher.de/" target="_blank">Neuen Deutschen Medienmacher*innen</a>, mit Station im Investigativressort des <a href="https://www.spiegel.de/" target="_blank">SPIEGEL</a>. Aktuell bei der <a href="https://taz.de/" target="_blank">taz</a>.</p>
   </div>
@@ -227,7 +235,7 @@ footer { padding: 16px 32px; text-align: center; font-size: 11px; color: var(--m
   </form>
 </div>
 
-<footer>© 2026 Noel Urcan · <a href="impressum.html" style="color:inherit">Impressum</a> · <a href="datenschutz.html" style="color:inherit">Datenschutz</a></footer>
+<footer><div class="footer-social"><a href="https://www.linkedin.com/in/noel-urcan-5694a6231/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="https://www.instagram.com/noel.urcan" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#1A1A1A" stroke="none"/></svg></a><a href="mailto:n.urcan@ndr.de" aria-label="Mail"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></a></div><div class="footer-text">© 2026 Noel Urcan · <a href="impressum.html" style="color:inherit">Impressum</a> · <a href="datenschutz.html" style="color:inherit">Datenschutz</a></div><div></div></footer>
 
 
 </body>
