@@ -1,4 +1,4 @@
-
+{% from "_karte.html.j2" import karte %}
 <!DOCTYPE html>
 <!-- Diese Datei wird automatisch aus templates/ erzeugt (scripts/sync_notion.py). Nicht direkt bearbeiten, Änderungen gehen beim nächsten Sync verloren. -->
 <html lang="de">
@@ -170,7 +170,7 @@ footer { padding: 16px 32px; text-align: center; font-size: 11px; color: var(--m
 
 <div class="press-bar">
   <div class="press-logos">
-      <span class="press-logos-label">Ver&ouml;ffentlicht u. a. in</span><span class="press-logo-box"><img class="press-logo press-logo-spiegel" src="assets/img/logos/spiegel-logo.png" alt="DER SPIEGEL"></span><span class="press-logo-box"><img class="press-logo press-logo-ndr" src="assets/img/logos/ndr-logo.png" alt="NDR"></span><span class="press-logo-box"><img class="press-logo press-logo-taz" src="assets/img/logos/taz-logo.svg" alt="taz"></span><span class="press-logo-box"><img class="press-logo press-logo-kohero" src="assets/img/logos/kohero-logo.svg" alt="kohero Magazin (online)"></span>
+      <span class="press-logos-label">Ver&ouml;ffentlicht u. a. in</span>{% for m in presseleiste %}<span class="press-logo-box"><img class="press-logo press-logo-{{ m.kuerzel }}" src="assets/img/logos/{{ m.logo }}" alt="{{ m.anzeigename }}"></span>{% endfor %}
     </div>
 </div>
 </div>
@@ -195,66 +195,8 @@ footer { padding: 16px 32px; text-align: center; font-size: 11px; color: var(--m
   <h2 class="section-title">Ausgewählte Arbeitsproben</h2>
   <div class="articles-block">
 
-        <div class="article-card">
-      <div class="card-body">
-        <div class="art-header">
-          <img class="logo-k" src="assets/img/logos/spiegel-logo.png" alt="DER SPIEGEL">
-          <span class="art-meta">DER SPIEGEL · 17. September 2026 · Ausgabe 39/2026</span>
-        </div>
-        <div class="art-title">Cyberbetrug: Wie eine israelische IT-Firma ein weltweites Abzock-System ermöglichte</div>
-        <div class="art-teaser">Mit einer Software aus Israel gaukeln Betrüger Riesenrenditen vor, am Ende ist das Geld der Anleger weg. Der SPIEGEL und seine Partner haben das kriminelle Netzwerk durchleuchtet. Die Recherche offenbart ein weltweites System der Abzocke.</div>
-        <div class="art-links">
-          <a class="art-ext" href="https://www.spiegel.de/panorama/justiz/cyberbetrug-wie-eine-israelische-it-firma-ein-weltweites-abzock-system-ermoeglichte-a-391792f5-67de-4927-a3b6-f5b746977059" target="_blank"><svg width="9" height="9" viewBox="0 0 10 10" fill="none" style="display:inline;vertical-align:middle"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="#6B6B6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> spiegel.de</a>
-          <a class="art-ext" href="https://www.spiegel.de/spiegel/print/index-2026-39.html" target="_blank"><svg width="9" height="9" viewBox="0 0 10 10" fill="none" style="display:inline;vertical-align:middle"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="#6B6B6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> DER SPIEGEL 39/2026</a>
-        </div>
-      </div>
-      <div class="img-credit-wrap"><img class="card-img" src="assets/img/2026-09-17_spiegel_cyberbetrug.webp" alt="Der verurteilte Benhamou im Gerichtssaal, neben ihm sein Anwalt"><span class="credit-label">Foto: Marian Lenhard/DER SPIEGEL</span></div>
-    </div>
-<div class="article-card">
-      <div class="card-body">
-        <div class="art-header">
-          <img class="logo-k" src="assets/img/logos/spiegel-logo.png" alt="DER SPIEGEL">
-          <span class="art-meta">DER SPIEGEL · 14. August 2026 · Ausgabe 34/2026</span>
-        </div>
-        <div class="art-title">Schutzgelderpresser-Banden in Berlin: Wie die Polizei die Eskalation der Gewalt stoppen will</div>
-        <div class="art-teaser">In Berlin erpressen türkische Gangs Betreiber von Cafés oder Supermärkten. Häufig fällt der Name »Daltons«. Doch die Polizei geht inzwischen von weiteren Hinterleuten aus – darunter alte Bekannte.</div>
-        <div class="art-links">
-          <a class="art-ext" href="https://www.spiegel.de/panorama/justiz/schutzgelderpresser-banden-in-berlin-wie-die-polizei-die-eskalation-der-gewalt-stoppen-will-a-e2cc3451-dff7-49ce-829a-47d676fb3d38?context=issue" target="_blank"><svg width="9" height="9" viewBox="0 0 10 10" fill="none" style="display:inline;vertical-align:middle"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="#6B6B6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> spiegel.de</a>
-          <a class="art-ext" href="https://www.spiegel.de/spiegel/print/index-2026-34.html" target="_blank"><svg width="9" height="9" viewBox="0 0 10 10" fill="none" style="display:inline;vertical-align:middle"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="#6B6B6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> DER SPIEGEL 34/2026</a>
-        </div>
-      </div>
-      <div class="img-credit-wrap"><img class="card-img" src="assets/img/2026-08-14_spiegel_schutzgeld-berlin.webp" alt="Schutzgelderpresser-Banden in Berlin"><span class="credit-label">Foto: DER SPIEGEL</span></div>
-    </div>
-<div class="article-card">
-      <div class="card-body">
-        <div class="art-header">
-          <img class="logo-k" src="assets/img/logos/taz-logo.svg" alt="taz">
-          <span class="art-meta">taz · 12. August 2026</span>
-        </div>
-        <div class="art-title">Prozess gegen JVA-Beamten in Lübeck: Missbrauchsvorwurf bleibt bestehen</div>
-        <div class="art-teaser">In Lübeck steht ein JVA-Beamter wegen des Vorwurfs sexuellen Missbrauchs einer Gefangenen erneut vor Gericht. Dieses Mal sagte auch die Betroffene aus.</div>
-        <div class="art-links">
-          <a class="art-ext" href="https://taz.de/Prozess-gegen-JVA-Beamten-in-Luebeck/!6200312/" target="_blank"><svg width="9" height="9" viewBox="0 0 10 10" fill="none" style="display:inline;vertical-align:middle"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="#6B6B6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> taz.de</a>
-        </div>
-      </div>
-      <div class="img-credit-wrap"><img class="card-img" src="assets/img/2026-08-12_taz_jva-luebeck.webp" alt="Prozess gegen JVA-Beamten in Lübeck: Missbrauchsvorwurf bleibt bestehen"><span class="credit-label">Foto: Daniel Bockwoldt/dpa</span></div>
-    </div>
-<div class="article-card">
-      <div class="card-body">
-        <div class="art-header">
-          <img class="logo-k" src="assets/img/logos/kohero-icon.png" alt="kohero Magazin (online)">
-          <span class="art-meta">kohero Magazin (online) · 14. Oktober 2025</span>
-        </div>
-        <div class="art-title">Heimatgefühle in einem fremden Land</div>
-        <div class="art-teaser">Noels Mutter ist Türkin, sein Vater Österreicher – geboren wurde er in Hamburg. Und doch fühlt er sich manchmal ein wenig mexikanisch. Was die Suche nach Zugehörigkeit über die Grenzen von Herkunft verrät</div>
-        <div class="art-links">
-          <a class="btn-read" href="assets/pdf/2025-10-14_kohero_heimatgefuehle.pdf" target="_blank">Lesen</a>
-          <a class="art-ext" href="https://www.kohero-magazin.de/heimatgefuhle-in-einem-fremden-land/" target="_blank"><svg width="9" height="9" viewBox="0 0 10 10" fill="none" style="display:inline;vertical-align:middle"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="#6B6B6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> kohero-magazin.de</a>
-        </div>
-      </div>
-      <div class="img-credit-wrap"><img class="card-img" src="assets/img/2025-10-14_kohero_heimatgefuehle.webp" alt="Heimatgefühle in einem fremden Land"><span class="credit-label">Foto: Allan González/Pexels</span></div>
-    </div>
-
+        {% for a in startseite %}{{ karte(a) }}
+{% endfor %}
     <a style="display:inline-block;margin-top:16px;font-size:11px;color:#6B6B6B;border-bottom:0.5px solid #E4E0D8;padding-bottom:1px;text-decoration:none" href="articles.html">Weitere Arbeitsproben ansehen <svg width="9" height="9" viewBox="0 0 10 10" fill="none" style="display:inline;vertical-align:middle"><path d="M1 5H9M9 5L5 1M9 5L5 9" stroke="#6B6B6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </div>

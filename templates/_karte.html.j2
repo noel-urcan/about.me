@@ -1,0 +1,23 @@
+{#- Eine Artikelkarte. Wird von index.html.j2 und articles.html.j2 benutzt. -#}
+{%- macro karte(a) -%}
+    <div class="article-card">
+      <div class="card-body">
+        <div class="art-header">
+          <img class="logo-k" src="assets/img/logos/{{ a.medium.icon }}" alt="{{ a.medium.anzeigename }}">
+          <span class="art-meta">{{ a.medium.anzeigename }} · {{ a.meta }}</span>
+        </div>
+        <div class="art-title">{{ a.titel }}</div>
+        <div class="art-teaser">{{ a.teaser }}</div>
+        <div class="art-links">
+{%- if a.pdf %}
+          <a class="btn-read" href="{{ a.pdf }}" target="_blank">Lesen</a>
+{%- endif %}
+          <a class="art-ext" href="{{ a.link }}" target="_blank"><svg width="9" height="9" viewBox="0 0 10 10" fill="none" style="display:inline;vertical-align:middle"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="#6B6B6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> {{ a.link_text }}</a>
+{%- if a.link2 %}
+          <a class="art-ext" href="{{ a.link2 }}" target="_blank"><svg width="9" height="9" viewBox="0 0 10 10" fill="none" style="display:inline;vertical-align:middle"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="#6B6B6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> {{ a.link2_text }}</a>
+{%- endif %}
+        </div>
+      </div>
+      <div class="img-credit-wrap"><img class="card-img" src="{{ a.foto }}" alt="{{ a.alt }}">{% if a.credits %}<span class="credit-label">{{ a.credits }}</span>{% endif %}</div>
+    </div>
+{%- endmacro -%}
